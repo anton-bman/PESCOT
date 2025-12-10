@@ -65,6 +65,9 @@ if isrow(y)
     y = y.';
 end
 
+stdy = std(y);
+y = y/stdy;
+
 % default values
 max_iter = 1000;
 pitchLim = [50, 500]/8000;
@@ -169,7 +172,7 @@ for iter = 1:max_iter
         fprintf("Iteration %.d \n ",iter)
         subplot(1,2,1)
         stem(pitchGrid*8000, sum(squeeze(M),1))
-        ylim([0 max(0.05, max(sum(squeeze(M),1)))])
+        % ylim([0 max(0.05/stdy^2/3, max(sum(squeeze(M),1)))])
         xlabel('Pitch (Hz)')
 
         subplot(1,2,2)
@@ -194,7 +197,8 @@ end
 logM = -C/epsilon + dual1./(zeta*gamma*epsilon) + dual0/(zeta*gamma*epsilon)*ones(1,size(dual1,2));
 M = exp(logM);
 
-
+M = M*stdy.^2;
+alpha = alpha*stdy;
 
 pitchDist = sum(squeeze(M),1);
 [pitchamp_sorted, idx] = sort(pitchDist, 'descend');

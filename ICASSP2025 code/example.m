@@ -9,7 +9,7 @@ pitches = [197, 240, 272];
 nActivePitches = length(pitches);
 nHarmonics = randi([3 10], 1, nActivePitches);
 N = 250; % number of samples
-inharm = 0.03; % inharmonicity of the signal
+inharm = 0.01; % inharmonicity of the signal
 SNR = 10; % SNR of the signal
 
 [y, ~, inharmHarmEst] = generateAlmostHarmonic(pitches, nHarmonics, N, fs, inharm, SNR);
@@ -24,10 +24,11 @@ realPitch = inharmHarmEst(:,1);
 
 
 %%%%% Parameter values
-epsilon = 1e-9; % entropic regularization parameter
-eta = 5e-1; % OT regularization parameter
-zeta = 5e2; % OT sparsity regularization parameter
-beta = 0.4; % l1 regularization parameter
+epsilon = 1e-7; % entropic regularization parameter
+eta = 1e0; % OT sparsity regularization parameter
+zeta = 8e3; % OT regularization parameter
+beta = 8e-2; % l1 regularization parameter
+
 
 
 %%%%% Optional inputs
