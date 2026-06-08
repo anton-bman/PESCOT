@@ -1,3 +1,4 @@
-Pitch estimator from the paper "Robust Multi-Pitch Estimation via Optimal Transport Clustering", ICASSP 2025. 
+Pitch estimators from the papers "Robust Multi-Pitch Estimation via Optimal Transport Clustering", ICASSP 2025, and "Inverse harmonic clustering for multi-pitch estimation: an optimal transport approach", Transactions on Signal Processing 2026. 
 
-The algorithm now normalizes the input signal, and the regularizing values are updated accordingly.
+
+The estimator from the ICASSP paper is denoted PESCOT-2, reflecting the squared term in the margin. Similarly, the deterministic model from the TSP paper is denoted PESCOT-1, due to the use of an absolute-value margin instead of a squared margin. The stochastic model from the TSP paper is denoted PESCOT-s, where "s" indicates the stochastic formulation. All variants are collectively referred to as PESCOT due to their common structure.

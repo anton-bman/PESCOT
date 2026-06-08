@@ -21,7 +21,7 @@ function [y, x, inharmHarmEst, harmonics, harmonicAmp, harmonicFreq] = generateA
 % harmonicFreq  -  all frequencies of the true signal
 
 
-help
+
 % time vector
 t = 0:1/fs:1/fs*(N-1);
 
