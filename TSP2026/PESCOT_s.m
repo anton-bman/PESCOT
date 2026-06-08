@@ -3,12 +3,9 @@ function [f0s, x_k, pitchGrid, pitchDist, M] = PESCOT_s(y, epsilon, zeta, eta, b
 %   PESCOT - Multi-Pitch Estimation with Sparse Clustering through Optimal
 %   Transport
 %
-%   [f0s, alpha, M] = PESCOT(y, epsilon, zeta, eta, beta, nPitches,...
+%   [f0s, alpha, M] = PESCOT_s(y, epsilon, zeta, eta, beta, nPitches,...
 %   max_iter, pitchLim, maxHarm, nPitchGrid, nFreqsGrid, doPrint)
 %
-%   Algorithm solving the problem min_alpha 1/N||y-A*alpha||_2^2 +
-%   beta||alpha||_1 + zeta S(alpha), where S(alpha) is a modified optimal
-%   transport problem.
 %
 %   INPUTS: 
 %   y           multipitch input signal (or single-pitch)
