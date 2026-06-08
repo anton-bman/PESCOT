@@ -3,4 +3,4 @@ Pitch estimators from the papers "Robust Multi-Pitch Estimation via Optimal Tran
 
 The estimator from the ICASSP paper is denoted PESCOT-2, reflecting the squared term in the margin. Similarly, the deterministic model from the TSP paper is denoted PESCOT-1, due to the use of an absolute-value margin instead of a squared margin. The stochastic model from the TSP paper is denoted PESCOT-s, where "s" indicates the stochastic formulation. All variants are collectively referred to as PESCOT due to their common structure.
 
-Several minor modifications have been introduced to improve performance and computational efficiency, including adjustments to normalization.
+Some minor modifications have been introduced to improve performance and computational efficiency, including adjustments to normalization.
